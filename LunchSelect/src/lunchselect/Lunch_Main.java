@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.Calendar;
 import java.util.Timer;
 import java.util.TimerTask;
 import javax.swing.JButton;
@@ -50,9 +51,82 @@ public class Lunch_Main extends JFrame implements ActionListener {
 		actionstart();
 
 		setResizable(false);
+	
+		set();
+		setlabel();
+		timeget();
 		
 	}
-
+	public void timeget() {
+		String sday=null;
+		while(true) {
+			
+			Calendar t=Calendar.getInstance();
+			int year = t.get(Calendar.YEAR);
+			int month = t.get(Calendar.MONTH);
+			int date = t.get(Calendar.DATE);
+			int amPm = t.get(Calendar.AM_PM);
+			int hour = t.get(Calendar.HOUR);
+			int min = t.get(Calendar.MINUTE);
+			int sec = t.get(Calendar.SECOND);
+			String ampm=amPm==Calendar.AM? "AM":"PM";
+			int day= t.get(Calendar.DAY_OF_WEEK);
+			switch(day) {
+			case 1:
+				sday="Sun";
+				break;
+			case 2:
+				sday="Mon";
+				break
+			case 3:
+				sday="Tus";
+				break;
+			case 4:
+				sday="Wed";
+				break;
+			case 5:
+				sday="Thu";
+				break;
+			case 6:
+				sday="Fri";
+				break;
+			case 7:
+				sday="Sat";
+				break;
+			}
+			one= (year+"."+month+"."+date+"."+sday+"day");
+			two=(ampm+" "+hour+":"+min+":"+sec);
+			first.setText(one);
+			second.setText(two);
+			contentPane.add(first);
+			contentPane.add(second);
+			try { 
+				Thread.sleep(100);
+				repaint();
+		    } catch(Exception e) {} 
+		}
+	}
+	public void setlabel() {
+	
+		first.setOpaque(false);
+		first.setBackground(new Color(0,0,0,0));
+		first.setBounds(20,0,300,50);
+		first.setForeground(Color.black);
+		first.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,14));
+		second.setOpaque(false);
+		second.setBackground(new Color(0,0,0,0));
+		second.setBounds(37,20,300,50);
+		second.setForeground(Color.black);
+		second.setFont(new Font("¸¼Àº °íµñ",Font.BOLD,14));
+	}
+	public void set() {
+		setTitle("Á¡½É¸Þ´º »Ì±â ÇÁ·Î±×·¥");
+		setLocationRelativeTo(null);
+		setLayout(null);
+		setVisible(true);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+	}
 	private void actionstart() {
 
 		add_btn.addActionListener(this);
