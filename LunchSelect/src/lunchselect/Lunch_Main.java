@@ -44,13 +44,10 @@ public class Lunch_Main extends JFrame implements ActionListener {
 		config();
 
 		actionstart();
-<<<<<<< HEAD
 
 		setResizable(false);
-=======
 		
 		setTitle("Á¡½É¸Þ´º »Ì±â ÇÁ·Î±×·¥");
->>>>>>> refs/heads/fix
 	}
 
 	private void actionstart() {
@@ -83,11 +80,15 @@ public class Lunch_Main extends JFrame implements ActionListener {
 
 		contentPane.add(add_btn);
 
+		add_btn.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 12));
+		
 		delete_btn.setBounds(589, 468, 62, 23);
 
 		contentPane.add(delete_btn);
+		
+		delete_btn.setFont(new Font("¸¼Àº °íµñ", Font.BOLD,12));
 
-		start_btn.setFont(new Font("±¼¸²", Font.PLAIN, 18));
+		start_btn.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 18));
 
 		start_btn.setBounds(180, 382, 156, 74);
 
@@ -95,7 +96,7 @@ public class Lunch_Main extends JFrame implements ActionListener {
 
 		tf_result = new JTextField();
 
-		tf_result.setFont(new Font("±¼¸²", Font.BOLD, 20));
+		tf_result.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
 
 		tf_result.setBackground(Color.PINK);
 
@@ -111,7 +112,7 @@ public class Lunch_Main extends JFrame implements ActionListener {
 
 		JLabel label = new JLabel("¿À´ÃÀÇ Á¡½É ¸Þ´º´Â?");
 
-		label.setFont(new Font("±¼¸²", Font.BOLD, 20));
+		label.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 20));
 
 		label.setHorizontalAlignment(SwingConstants.CENTER);
 
@@ -125,7 +126,7 @@ public class Lunch_Main extends JFrame implements ActionListener {
 
 		contentPane.add(scrollPane);
 
-		list.setFont(new Font("±¼¸²", Font.BOLD, 18));
+		list.setFont(new Font("¸¼Àº °íµñ", Font.BOLD, 18));
 
 		scrollPane.setViewportView(list);
 
