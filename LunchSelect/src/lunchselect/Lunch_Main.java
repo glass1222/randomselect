@@ -27,25 +27,30 @@ public class Lunch_Main extends JFrame implements ActionListener {
 
 	private JTextField tf_result;
 
-	JButton add_btn = new JButton("\uCD94\uAC00");
+	JButton add_btn = new JButton("추가");
 
-	JButton delete_btn = new JButton("\uC0AD\uC81C");
+	JButton delete_btn = new JButton("삭제");
 
-	JButton start_btn = new JButton("\uC2E4     \uD589");
+	JButton start_btn = new JButton("뽑기");
 
 	List list = new List();
 
 	String[] str;
 
-	JButton search_btn = new JButton("\uAC80 \uC0C9");
+	JButton search_btn = new JButton("검색");
 
 	public Lunch_Main() {
 
 		config();
 
 		actionstart();
+<<<<<<< HEAD
 
 		setResizable(false);
+=======
+		
+		setTitle("점심메뉴 뽑기 프로그램");
+>>>>>>> refs/heads/fix
 	}
 
 	private void actionstart() {
@@ -104,7 +109,7 @@ public class Lunch_Main extends JFrame implements ActionListener {
 
 		tf_result.setColumns(10);
 
-		JLabel label = new JLabel("\uC624\uB298\uC758 \uC810\uC2EC\uBA54\uB274");
+		JLabel label = new JLabel("오늘의 점심 메뉴는?");
 
 		label.setFont(new Font("굴림", Font.BOLD, 20));
 
