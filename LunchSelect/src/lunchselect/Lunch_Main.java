@@ -62,6 +62,7 @@ public class Lunch_Main extends JFrame implements ActionListener {
 		while(true) {
 			
 			Calendar t=Calendar.getInstance();
+			// 날짜, 시간을 받아옴
 			int year = t.get(Calendar.YEAR);
 			int month = t.get(Calendar.MONTH);
 			int date = t.get(Calendar.DATE);
@@ -69,9 +70,9 @@ public class Lunch_Main extends JFrame implements ActionListener {
 			int hour = t.get(Calendar.HOUR);
 			int min = t.get(Calendar.MINUTE);
 			int sec = t.get(Calendar.SECOND);
-			String ampm=amPm==Calendar.AM? "AM":"PM";
-			int day= t.get(Calendar.DAY_OF_WEEK);
-			switch(day) {
+			String ampm=amPm==Calendar.AM? "AM":"PM"; // 비교 후 am 이나 pm을 ampm에 저장
+			int day= t.get(Calendar.DAY_OF_WEEK); // 요일을 정수형으로 일~토->1~7
+			switch(day) { //요일 설정
 			case 1:
 				sday="Sun";
 				break;
@@ -94,19 +95,19 @@ public class Lunch_Main extends JFrame implements ActionListener {
 				sday="Sat";
 				break;
 			}
-			one= (year+"."+month+"."+date+"."+sday+"day");
-			two=(ampm+" "+hour+":"+min+":"+sec);
+			one= (year+"."+month+"."+date+"."+sday+"day");//문자열 one에 저장
+			two=(ampm+" "+hour+":"+min+":"+sec);//문자열two에 저장
 			first.setText(one);
 			second.setText(two);
-			contentPane.add(first);
-			contentPane.add(second);
+			contentPane.add(first); //기존 패널에 추가
+			contentPane.add(second); // 마찬가지
 			try { 
-				Thread.sleep(100);
+				Thread.sleep(100); // 0.1초 간격으로
 				repaint();
-		    } catch(Exception e) {} 
+		    } catch(Exception e) {} //예외처리 
 		}
 	}
-	public void setlabel() {
+	public void setlabel() { //날짜, 시간 라벨 설정들
 	
 		first.setOpaque(false);
 		first.setBackground(new Color(0,0,0,0));
@@ -120,8 +121,8 @@ public class Lunch_Main extends JFrame implements ActionListener {
 		second.setFont(new Font("맑은 고딕",Font.BOLD,14));
 	}
 	public void set() {
-		setTitle("점심메뉴 뽑기 프로그램");
-		setLocationRelativeTo(null);
+		setTitle("점심메뉴 뽑기 프로그램"); // 타이틀 그냥 여기로 옮겼음
+		setLocationRelativeTo(null); // 화면 가운데서 창이 나오게 함
 		setLayout(null);
 		setVisible(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
