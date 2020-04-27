@@ -138,27 +138,22 @@ public class Lunch_Main extends JFrame implements ActionListener {
 
 	private void add() {
 
-		list.add("청진식당");
-
-		list.add("뚝배기집");
-
-		list.add("굿모닝");
+		list.add("청춘라면");
 
 		list.add("맘스터치");
 
-		list.add("순대국밥");
+		list.add("국밥");
 
-		list.add("쌀국수");
+		list.add("중국집");
 
-		list.add("한솥");
+		list.add("찜닭");
 
-		list.add("육개장");
+		list.add("학식 스폐셜메뉴");
 
-		list.add("순두부찌개");
+		list.add("감자탕");
+		
+		list.add("도시락");
 
-		list.add("부대찌개");
-
-		list.add("먹쉬돈나");
 
 	}
 
@@ -189,7 +184,7 @@ public class Lunch_Main extends JFrame implements ActionListener {
 
 			list.remove(i);
 
-			JOptionPane.showMessageDialog(null, "삭제에 성공했습니다.");
+			JOptionPane.showMessageDialog(null, "해당 메뉴를 삭제했습니다.");
 
 		} else if (e.getSource() == start_btn) {
 
@@ -209,7 +204,7 @@ public class Lunch_Main extends JFrame implements ActionListener {
 
 				Desktop.getDesktop().browse(new URI("https://www.google.co.kr/search?"
 
-						+ "q=종각역+" + tf_result.getText() + "&oq=종각역+" + tf_result.getText()
+						+ "q=대구대+" + tf_result.getText() + "&oq=대구대+" + tf_result.getText()
 
 						+ "&aqs=chrome"
 
