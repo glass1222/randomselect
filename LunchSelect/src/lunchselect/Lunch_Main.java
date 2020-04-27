@@ -38,7 +38,11 @@ public class Lunch_Main extends JFrame implements ActionListener {
 	String[] str;
 
 	JButton search_btn = new JButton("검색");
-
+	
+	private String one, two;
+	private JLabel first = new JLabel();
+	private JLabel second = new JLabel();
+	
 	public Lunch_Main() {
 
 		config();
@@ -47,7 +51,6 @@ public class Lunch_Main extends JFrame implements ActionListener {
 
 		setResizable(false);
 		
-		setTitle("점심메뉴 뽑기 프로그램");
 	}
 
 	private void actionstart() {
