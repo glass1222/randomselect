@@ -45,6 +45,7 @@ public class Lunch_Main extends JFrame implements ActionListener {
 
 		actionstart();
 
+		setResizable(false);
 	}
 
 	private void actionstart() {
